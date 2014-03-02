@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ardunoid|Schwalbe</string>
+    <string name="app_name">ardunoidSchwalbe</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="label_gemisch">Gemisch wählen:</string>
+    <string name="labelGasolineHeadline">Getankt:</string>
+
 
 </resources>
