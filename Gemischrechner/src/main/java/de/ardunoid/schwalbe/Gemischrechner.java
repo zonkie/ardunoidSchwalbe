@@ -24,7 +24,7 @@ public class Gemischrechner extends Activity {
 
         mixBar = (SeekBar) findViewById(R.id.seekMix);
         gasolineBar = (SeekBar) findViewById(R.id.seekGasoline);
-
+        calculateMix();
         OnSeekBarChangeListener seekbarChangeListener = new OnSeekBarChangeListener() {
             @Override
             public void onStopTrackingTouch(SeekBar mix) {}
@@ -48,17 +48,16 @@ public class Gemischrechner extends Activity {
         TextView mixLabel = (TextView)findViewById(R.id.textMixLabel);
         TextView gasolineLabel = (TextView)findViewById(R.id.textGasolineLiter);
 
-        mixLabel.setText("1:" +  Integer.toString(progressMix));
-        gasolineLabel.setText(Float.toString(progressGas) + " Liter");
+        mixLabel.setText(String.format(getString(R.string.labelMix), Integer.toString(progressMix)));
+        gasolineLabel.setText(String.format(getString(R.string.labelGasoline), Float.toString(progressGas)));
 
-        Log.d("Schwalbe", "Mix: " + String.valueOf(progressMix) + "Gasoline: " + String.valueOf(progressGas));
         TextView textResult = (TextView) findViewById(R.id.textResult);
         if(progressMix > 0 && progressGas > 0){
             int oil = progressGasInt / progressMix;
             float oilFloat = (float)oil;
             oilFloat = oilFloat/100;
-            Log.d("Schwalbe", "Oil: " + Float.toString( oilFloat ));
-            textResult.setText(Float.toString(oilFloat) + "Liter");
+
+            textResult.setText(String.format(getString(R.string.textResult), Float.toString(oilFloat)));
         }
     }
 

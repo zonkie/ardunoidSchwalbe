@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Zu tanken: 200 ml öl"
+        android:text="@string/textResult"
         android:id="@+id/textResult"
         android:layout_centerHorizontal="true" />
     <TextView
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/textMixLabel"
-        android:text="1:25"
+        android:text="@string/labelMix"
         android:layout_below="@+id/textlabelMixHeadline"
         android:layout_centerHorizontal="true" />
 
@@ -43,15 +43,19 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:max="100"
+        android:max="50"
         android:progress="25"
-        android:indeterminate="false" />
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:longClickable="false"
+        android:mirrorForRtl="false"
+        android:thumb="@drawable/schwalbe" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="5 liter"
+        android:text="@string/labelGasoline"
         android:id="@+id/textGasolineLiter"
         android:layout_below="@+id/seekMix"
         android:layout_centerHorizontal="true" />
@@ -61,14 +65,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/seekGasoline"
         android:progress="500"
-        android:max="1500"
+        android:max="1000"
         android:indeterminate="false"
         android:layout_below="@+id/textGasolineLiter"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/seekMix"
         android:layout_alignEnd="@+id/seekMix"
-        android:mirrorForRtl="false" />
+        android:mirrorForRtl="false"
+        android:thumb="@drawable/schwalbe"/>
 
 
 </RelativeLayout>

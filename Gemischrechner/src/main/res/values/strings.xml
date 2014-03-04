@@ -6,6 +6,9 @@
     <string name="action_settings">Settings</string>
     <string name="label_gemisch">Gemisch wählen:</string>
     <string name="labelGasolineHeadline">Getankt:</string>
+    <string name="textResult">Zu tanken: %s l öl</string>
+    <string name="labelGasoline">%s liter</string>
+    <string name="labelMix">1:%s</string>
 
 
 </resources>
